@@ -34,3 +34,26 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+# Digital PIN LLC - الجسر الرقمي
+
+![Digital PIN Logo](public/images/logo.png) <!-- أضف شعارك -->
+
+شركة مصرية تقدم حلولاً رقمية وهندسية متكاملة.  
+**الخدمات**:  
+- تطوير أنظمة ERP مخصصة (Dolibarr)  
+- منصات تعليمية (PinLearn)  
+- حلول هندسية (هياكل شمسية، كبائن إعلانية)  
+
+## 🛠️ التقنيات المستخدمة
+- Next.js 14 (Frontend)  
+- Strapi (Backend)  
+- Three.js (عروض 3D)  
+- Docker (للنشر)  
+
+## 🔧 كيفية التشغيل
+```bash
+git clone https://github.com/Digital-Pins/digital-pin-llc.git
+npm install
+npm run dev
