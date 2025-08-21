@@ -77,3 +77,12 @@ Digital PIN LLC
 
 Digital PIN LLC
 شكر مقدم ل copilot
+
+## Local build run — 2025-08-21T02:04:27Z UTC
+
+- digital-pin-llc build: exit code 1
+- cms build: exit code 1
+
+Logs:
+- /tmp/dpl-build-logs-If6j/digital-pin-llc.build.log
+- /tmp/dpl-build-logs-If6j/cms.build.log
