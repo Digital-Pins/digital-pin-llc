@@ -1,0 +1,7 @@
+# Example forced-command authorized_keys line for coco-dev (adjust key & paths)
+# Replace ssh-ed25519 AAAA... with the real public key.
+
+command="/usr/local/bin/deploy-wrapper.sh version",no-port-forwarding,no-agent-forwarding,no-X11-forwarding,no-pty ssh-ed25519 AAAAC3NzY2RldjEyMzQ1NmV4YW1wbGU= coco-dev@digitalpin
+
+# To allow a specific action (e.g. sync) duplicate line and change forced command:
+# command="/usr/local/bin/deploy-wrapper.sh sync-erp-dev",no-port-forwarding,no-agent-forwarding,no-X11-forwarding,no-pty ssh-ed25519 AAAAC3NzY2RldjEyMzQ1NmV4YW1wbGU= coco-dev@digitalpin
