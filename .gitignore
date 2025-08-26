@@ -4,3 +4,8 @@ node_modules
 .tmp
 dist
 build
+backups/
+backups/*.tar.gz
+.vscode/
+digital-pins.github.io/
+dolibarr-custom/
