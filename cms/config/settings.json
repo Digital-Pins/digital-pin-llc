@@ -1,0 +1,19 @@
+{
+  "database": {
+    "type": "sqlite",
+    "name": "cms_database.db",
+    "path": "./data/"
+  },
+  "content_types": [
+    "articles",
+    "pages",
+    "media",
+    "categories"
+  ],
+  "ai_features": [
+    "content_planning",
+    "seo_optimization",
+    "content_suggestions",
+    "performance_analytics"
+  ]
+}
