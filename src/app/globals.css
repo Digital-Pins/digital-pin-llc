@@ -1,3 +1,17 @@
+:root{
+  --muted: #e6e6e6;
+  --card-bg: #fff;
+  --container-width: 1100px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:#fafafa;color:#111}
+.container{max-width:var(--container-width);margin:0 auto;padding:16px}
+.site-header{background:#fff;border-bottom:1px solid #eee}
+.site-header .brand{font-weight:700;margin-right:1rem}
+.nav a{margin-left:1rem;text-decoration:none;color:#333}
+.site-footer{margin-top:3rem;padding:16px 0;color:#666}
+
+@media(min-width:1024px){.container{padding:24px}}
 @import "tailwindcss";
 
 :root {

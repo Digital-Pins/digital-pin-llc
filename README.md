@@ -1,59 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Digital PIN LLC (الجسر الرقمي)
 
-## Getting Started
+Unified digital & engineering solutions: custom ERP (Dolibarr), learning platforms, and engineering products (solar structures, signage kiosks).
 
-First, run the development server:
+## 🌐 Frontend (This Repo)
+Next.js 14 + App Router + TypeScript + Tailwind.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🧱 Related Backends
+- Strapi (CMS / Headless content / KB)
+- Dolibarr (ERP custom fork) ـ إدارة الموارد
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-
-# Digital PIN LLC - الجسر الرقمي
-
-![Digital PIN Logo](public/images/logo.png) <!-- أضف شعارك -->
-
-شركة مصرية تقدم حلولاً رقمية وهندسية متكاملة.  
-**الخدمات**:  
-- تطوير أنظمة ERP مخصصة (Dolibarr)  
-- منصات تعليمية (PinLearn)  
-- حلول هندسية (هياكل شمسية، كبائن إعلانية)  
-
-## 🛠️ التقنيات المستخدمة
-- Next.js 14 (Frontend)  
-- Strapi (Backend)  
-- Three.js (عروض 3D)  
-- Docker (للنشر)  
-
-## 🔧 كيفية التشغيل
+## 🚀 Getting Started
 ```bash
 git clone https://github.com/Digital-Pins/digital-pin-llc.git
+cd digital-pin-llc/digital-pin-llc
 npm install
 npm run dev
+```
+Visit: http://localhost:3000
+
+Edit `app/page.tsx` and save; hot reload will refresh.
+
+## 🛠️ Tech Stack
+- Next.js 14
+- React / TypeScript
+- Tailwind CSS
+- (Planned) Playwright for E2E tests
+
+## ✅ Smoke Test (اختبار سريع)
+سلسلة أوامر سريعة للتحقق قبل فتح PR أو بعد نشر محلي:
+```bash
+# 1. إظهار الإصدارات
+node -v && npx next --version
+
+# 2. تثبيت نظيف (في CI استعمل npm ci)
+npm install
+
+# 3. فحص بناء سريع (قد يتجاهل خيار --dry-run)
+npm run build --dry-run 2>/dev/null || echo "(قد لا يدعم --dry-run)"
+
+# 4. تشغيل dev مؤقتاً ثم طلب الصفحة الرئيسية
+npm run dev & DEV_PID=$!; sleep 6; curl -I http://localhost:3000 | head -n 1; kill $DEV_PID
+
+# 5. Lint إن وُجد سكربت
+npm run lint || echo "Lint skipped"
+
+# 6. تحقق من ملفات أساسية
+[ -f next.config.ts ] && echo "next.config.ts OK" || echo "Missing next.config.ts"
+[ -d app ] && echo "app dir OK" || echo "Missing app dir"
+```
+نتائج متوقعة:
+- سطر يحتوي HTTP/1.1 200 أو 304.
+- عدم وجود أخطاء قاتلة في البناء.
+- ظهور نسخ Node و Next.
+
+## 🧪 CI (مثال مبسط)
+```bash
+npm ci
+npm run build
+npx next export || echo "(اختياري)"
+```
+
+## 📂 هيكل (مختصر)
+```
+digital-pin-llc/
+  app/
+  components/
+  public/
+  styles/
+  tests/
+```
+أضف لاحقاً:
+- tests/unit لاختبارات منطقية.
+- tests/e2e لاختبارات الواجهة (Playwright).
+
+## 🤝 المساهمة
+افتح Issue أو PR. حافظ على بساطة الـ commits. استخدم فروع feature/*.
+
+## 🧭 الخطوات القادمة (Roadmap)
+- دمج Playwright.
+- إضافة ESLint + Prettier config محسّن (إن لم يكن موجوداً).
+- ربط مع Strapi endpoints.
+- مكون 3D (Three.js) للمعرض الهندسي.
+
+## 📄 الترخيص
+انظر LICENSE.
+
+---
+© Digital PIN LLC

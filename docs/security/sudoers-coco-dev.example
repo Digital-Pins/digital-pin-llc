@@ -1,0 +1,11 @@
+# Place this file (edited) at /etc/sudoers.d/coco-dev with mode 440
+# Grant only narrowly scoped commands for deployment tasks.
+
+Defaults:coco-dev !requiretty
+coco-dev ALL=(root) NOPASSWD: /usr/sbin/nginx, /usr/bin/systemctl reload nginx, /usr/bin/systemctl restart php8.1-fpm, /usr/bin/env bash -c *sync-dolibarr-dev.sh*, /usr/bin/tail /var/log/nginx/dev_erp.error.log
+
+# Explanation:
+# - nginx syntax test + reload
+# - restart php-fpm if needed
+# - run the sync script (pattern match) via bash -c
+# - read tail of error log (for quick diagnostics)
