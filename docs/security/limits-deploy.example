@@ -1,0 +1,5 @@
+# /etc/security/limits.d/deploy.conf example
+coco-dev soft nproc 256
+coco-dev hard nproc 512
+coco-dev soft nofile 4096
+coco-dev hard nofile 8192

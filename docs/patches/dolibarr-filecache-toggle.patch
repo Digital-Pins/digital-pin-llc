@@ -1,0 +1,26 @@
+--- dolibarr-custom/dolibarr-dev/htdocs.bak.20250822020423/user/param_ihm.php	2025-08-21 14:39:34.066032728 +0300
++++ dolibarr-custom/dolibarr-dev/htdocs/user/param_ihm.php	2025-08-23 04:24:59.037186917 +0300
+@@ -476,6 +476,23 @@
+ 
+ 	// Theme
+ 	showSkins($object, (($user->admin || empty($dolibarr_main_demo)) ? 1 : 0), true);
++	print $form->buttonsSaveCancel();
++
++	// Per-user widget file cache toggle (allow user to enable/disable widget filecache for themselves)
++	print '<br>';
++	print '<table class="noborder centpercent">';
++	print '<tr class="oddeven"><td class="titlefieldmiddle">'.$langs->trans("EnableFileCache").'</td>';
++	print '<td>'.($conf->global->MAIN_ACTIVATE_FILECACHE ? $langs->trans("Yes") : $langs->trans("No")).'</td>';
++	print '<td class="nowrap" width="20%"><input class="oddeven" name="check_MAIN_ACTIVATE_FILECACHE" id="check_MAIN_ACTIVATE_FILECACHE" type="checkbox" '.(isset($object->conf->MAIN_ACTIVATE_FILECACHE) ? " checked" : "");
++	print empty($dolibarr_main_demo) ? '' : ' disabled="disabled"'; // Disabled for demo
++	print '> <label for="check_MAIN_ACTIVATE_FILECACHE">'.$langs->trans("UsePersonalValue").'</label></td>';
++	print '<td>';
++	// Use ajax_constantonoff with $object so core/ajax/constantonoff.php will persist as user param
++	print ajax_constantonoff('MAIN_ACTIVATE_FILECACHE', array(), null, 0, 0, 1, 0, 0, 0, '', '', '', $object);
++	print '</td></tr>';
++	print '</table>';
++
++	print $form->buttonsSaveCancel();
+ 
+ 
+ 	print $form->buttonsSaveCancel();

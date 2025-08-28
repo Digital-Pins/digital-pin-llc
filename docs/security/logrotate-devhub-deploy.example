@@ -1,0 +1,11 @@
+/var/log/devhub-deploy.log {
+  weekly
+  rotate 8
+  compress
+  missingok
+  notifempty
+  create 640 root coco-dev
+  postrotate
+    /usr/bin/systemctl kill -s HUP rsyslog.service 2>/dev/null || true
+  endscript
+}

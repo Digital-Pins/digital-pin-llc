@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily DevHub OCI Backup Timer (erp-dev)
+
+[Timer]
+OnCalendar=*-*-* 02:15:00
+RandomizedDelaySec=900
+Persistent=true
+
+[Install]
+WantedBy=timers.target

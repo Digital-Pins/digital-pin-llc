@@ -1,103 +1,106 @@
-# Environment variables
 .env
+.env.*
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Dependencies
+.env.production
+.env.development
 node_modules/
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Next.js
 .next/
-out/
-.next
-
-# Production
-/build
-
-# Misc
-.DS_Store
+.tmp/
+dist/
+build/
+.cache/
+.eslintcache
+coverage/
+test-results/
+playwright-report/
+logs/
+*.log
+*.out
+*.err
+*.pid
+*.seed
+*.sqlite
+*.db
 *.pem
 *.key
 *.crt
+*.csr
+oci_config_tmp*
+*.service~
+*.tar.gz
+*.sha256
+pkg/*.tar.gz
+pkg/*.sha256
+backup-*.tgz
+backup-*.zip
+*.bak
+*.swp
+*.swo
+*.tmp
+*.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+docs/backup/first-backup-*.md
+docs/backup/restore-*.md
+docs/backup/OCI_BACKUP_SETUP.md~
+scripts/backup/*.bak
+scripts/backup/*.tmp
+scripts/backup/*.log
+scripts/dev-hub/*.log
+scripts/dev-hub/*.tmp
+services/frontend-next/.next/
+services/frontend-next/.cache/
+services/frontend-next/coverage/
+services/frontend-next/test-results/
+services/frontend-next/playwright-report/
 
-# Debug
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
-# Local env files
-.env*.local
+# env files (can opt-in for committing if needed)
+.env*
 
-# Vercel
+# vercel
 .vercel
 
-# TypeScript
+# typescript
 *.tsbuildinfo
+next-env.d.ts
 
-# IDE
-.vscode/
-.idea/
+# Next.js
+.next/
+node_modules/
 
-# OS
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Temporary files
-*.tmp
-*.temp
-*.log
-*.swp
-*.swo
-*~
-
-# Backup files
-*.bak
-*.backup
-*.orig
-*.old
-
-# Reports and analysis files
-*_REPORT.md
-*_ANALYSIS_*.md
-BOOTSTRAP_*.md
-
-# PHP temporary files
-run_init_pin.php
-tmp_list_modules.php
-
-# Maintenance folders (uncomment if you want to ignore them)
-# maintenance-4egtrust/
-# maintenance-4egtrust-repo/
-
-# Dolibarr custom (uncomment if you want to ignore it)
-# dolibarr-custom/
-
-# Digital PIN specific
-digital-pins.github.io/
-backups/cleanup-*
-backups/*.tar.gz
-backups/*.sql
-backups/*.bak*
+# Strapi
+.env
+.sass-cache/
