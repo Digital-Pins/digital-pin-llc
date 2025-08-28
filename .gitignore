@@ -1,0 +1,113 @@
+.env
+.env.*
+.env.local
+.env.production
+.env.development
+node_modules/
+.next/
+.tmp/
+dist/
+build/
+.cache/
+.eslintcache
+coverage/
+test-results/
+playwright-report/
+logs/
+*.log
+*.out
+*.err
+*.pid
+*.seed
+*.sqlite
+*.db
+*.pem
+*.key
+*.crt
+*.csr
+oci_config_tmp*
+*.service~
+*.tar.gz
+*.sha256
+pkg/*.tar.gz
+pkg/*.sha256
+backup-*.tgz
+backup-*.zip
+*.bak
+*.swp
+*.swo
+*.tmp
+*.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+docs/backup/first-backup-*.md
+docs/backup/restore-*.md
+docs/backup/OCI_BACKUP_SETUP.md~
+scripts/backup/*.bak
+scripts/backup/*.tmp
+scripts/backup/*.log
+scripts/dev-hub/*.log
+scripts/dev-hub/*.tmp
+services/frontend-next/.next/
+services/frontend-next/.cache/
+services/frontend-next/coverage/
+services/frontend-next/test-results/
+services/frontend-next/playwright-report/
+
+# Backup files and folders
+backups/
+*.tar.gz
+*.tgz
+*.zip
+*.bak
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Next.js
+.next/
+node_modules/
+
+# Strapi
+.env
+.sass-cache/
