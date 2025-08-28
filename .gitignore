@@ -1,11 +1,103 @@
+# Environment variables
 .env
-node_modules
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Next.js
+.next/
+out/
 .next
-.tmp
-dist
-build
-backups/
-backups/*.tar.gz
+
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+*.key
+*.crt
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+
+# IDE
 .vscode/
+.idea/
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+*.orig
+*.old
+
+# Reports and analysis files
+*_REPORT.md
+*_ANALYSIS_*.md
+BOOTSTRAP_*.md
+
+# PHP temporary files
+run_init_pin.php
+tmp_list_modules.php
+
+# Maintenance folders (uncomment if you want to ignore them)
+# maintenance-4egtrust/
+# maintenance-4egtrust-repo/
+
+# Dolibarr custom (uncomment if you want to ignore it)
+# dolibarr-custom/
+
+# Digital PIN specific
 digital-pins.github.io/
-dolibarr-custom/
+backups/cleanup-*
+backups/*.tar.gz
+backups/*.sql
+backups/*.bak*
